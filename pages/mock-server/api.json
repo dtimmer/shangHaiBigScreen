@@ -1,0 +1,117 @@
+{
+    "test": [{
+            "url": "/news",
+            "desc": "获取舆情",
+            "mock": true,
+            "res": {
+                "code": 200,
+                "msg": "Get news successfully.",
+                "data": {
+                    "news": "马云真把肯德基买了是为了报30年前的仇吗?",
+                    "datetime|20": [
+                        "@integer(1, 100)"
+                    ]
+                }
+            }
+        },
+        {
+            "url": "/counter",
+            "desc": "获取用户数",
+            "mock": true,
+            "delay": 1000,
+            "res": {
+                "code": "200",
+                "msg": "get counter successfully",
+                "data": {
+                    "majorAreaData": {
+                        "userCount": "@integer(1, 1000)",
+                        "handling": "@integer(1, 1000)",
+                        "fixed": "@integer(1, 1000)",
+                        "filed": "@integer(1, 1000)"
+                    },
+                    "majorNetworkData": {
+                        "userCount": "@integer(1, 1000)",
+                        "handling": "@integer(1, 1000)",
+                        "fixed": "@integer(1, 1000)",
+                        "filed": "@integer(1, 1000)"
+                    },
+                    "majorSPData": {
+                        "userCount": "@integer(1, 1000)",
+                        "handling": "@integer(1, 1000)",
+                        "fixed": "@integer(1, 1000)",
+                        "filed": "@integer(1, 1000)"
+                    }
+                }
+            }
+        },
+        {
+            "url": "/getMapPoint",
+            "desc": "获取地图打点数据",
+            "mock": true,
+            "res": {
+                "code": 200,
+                "msg": "get map points data successfully",
+                "data": {
+                    "list|3000": [{
+                        "lat|30-31.0-9": 1,
+                        "lng|120-122.0-7": 1,
+                        "score": "@integer(1, 100)"
+                    }]
+                }
+            }
+        },
+        {
+            "url": "/config",
+            "desc": "保存配置",
+            "mock": true,
+            "delay": 1000,
+            "res": {
+                "code": "@pick([200, 500])",
+                "msg": "There is a 50% chance of failure, pls try again",
+                "data": [
+                    "Save config successfully"
+                ]
+            }
+        },
+        {
+            "url": "/chartData",
+            "desc": "获取表格数据",
+            "mock": true,
+            "res": {
+                "code": 200,
+                "msg": "Get data success",
+                "data": {
+                    "xAxis": {
+                        "data|20": [
+                            "@city()"
+                        ]
+                    },
+                    "yAxis": {},
+                    "series": [{
+                            "name": "销量1",
+                            "data|20": [
+                                "@integer(1, 100)"
+                            ]
+                        },
+                        {
+                            "name": "销量2",
+                            "data|20": [
+                                "@integer(1, 100)"
+                            ]
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "url": "/",
+            "desc": "Index",
+            "mock": true,
+            "res": {
+                "code": 200,
+                "msg": "Hi, this is mock server.",
+                "data": ""
+            }
+        }
+    ]
+}

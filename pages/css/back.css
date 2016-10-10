@@ -1,0 +1,740 @@
+@charset "UTF-8";
+.back {
+	color: #fff;
+	font-size: 0.2rem;
+	/**back**/
+}
+
+.back> .header {
+	height: 0.65rem;
+	background-color: #293c42;
+}
+
+.back> .header ul {
+	height: 100%;
+	width: 100%;
+}
+
+.back> .header .title> h3 {
+	line-height: 0.65rem;
+}
+
+.back> .header .title> h3 span {
+	color: #c8fef9;
+	font-size: 0.3rem;
+}
+
+.back> .header> ul> li {
+	height: 100%;
+	margin: 0;
+	vertical-align: middle;
+	margin-left: 0.31rem;
+	float: left;
+	box-sizing: border-box;
+	padding-top: 0.05rem;
+}
+
+.back> .header> ul> li p span {
+	color: #65fff1;
+	font-size: 0.12rem;
+}
+
+.back> .header> ul> li:first-child {
+	margin-left: 0.24rem;
+	margin-right: 0.38rem;
+}
+
+.zdcj .back> .header> ul> li:first-child {
+	margin-right: 0.2rem;
+	padding: ;
+}
+
+.zdwy .back> .header> ul> li:first-child {
+	margin-right: 0.2rem;
+}
+
+
+/*头部信息， title, 处理中， 业务修复，影响用户数*/
+
+.title> h3> i,
+.processing> h3> i,
+.bnsRepaire> h3> i,
+.userCount> h3> i {
+	width: 0.3rem;
+	height: 0.3rem;
+	display: inline-block;
+	margin: 0 0.08rem;
+	vertical-align: middle;
+	margin-top: -0.1rem;
+}
+
+.title> span,
+.processing> span,
+.bnsRepaire> span,
+.userCount> span {
+	font-size: 0.23rem;
+	margin-top: 0.06rem;
+	display: inline-block;
+	color: #51c7bd;
+	font-family: 'HelveticaNeueLTStd-Lt';
+}
+
+.processing> p> i,
+.bnsRepaire> p> i,
+.userCount> p> i {
+	display: inline-block;
+	width: 0.11rem;
+	height: 0.11rem;
+	margin-right: 0.05rem;
+}
+
+
+/*重点场景--背景*/
+
+.zdcj .title> h3> i {
+	background: url("../imgs/zdcj.png") no-repeat center center/100% 100%;
+	object-fit: cover;
+}
+
+
+/*重点网元--背景*/
+
+.zdwy .title> h3> i {
+	background: url("../imgs/zdwy.png") no-repeat center center/100% 100%;
+	object-fit: cover;
+}
+
+
+/*重点SP--背景*/
+
+.zdsp .title> h3> i {
+	background: url("../imgs/zdsp.png") no-repeat center center/100% 100%;
+	object-fit: cover;
+}
+
+
+/*重点场景，重点网元，重点SP，处理中，业务修复，影响用户*/
+
+.zdcj .processing> p> i,
+.zdwy .processing> p> i,
+.zdsp .processing> p> i {
+	background-color: #5191c7;
+}
+
+.zdcj .bnsRepaire> p> i,
+.zdwy .bnsRepaire> p> i,
+.zdsp .bnsRepaire> p> i {
+	background-color: #51c7bd;
+}
+
+.zdcj .userCount> p> i,
+.zdwy .userCount> p> i,
+.zdsp .userCount> p> i {
+	background: url("../imgs/user.png") no-repeat center center/100% 100%;
+}
+
+
+/*content---重点场景*/
+
+
+/*框架结构*/
+
+.content {
+	width: 92%;
+	margin: 0 auto;
+	margin-top: 0.32rem;
+	font-size: 0.14rem;
+}
+
+.cityMainPlace,
+.mainVedio {
+	margin-top: 0.43rem;
+	height: 3rem;
+	overflow-y: auto;
+}
+
+.cityMainPlace> .itemDetail,
+.mainVedio> .itemDetail {
+	width: 4.52rem;
+	float: left;
+}
+
+.cityMainPlace .itemDetail .itemDetailUl> li,
+.mainVedio> .itemDetail> ul> li {
+	width: 2.275rem;
+	height: 1.09rem;
+	margin: 0;
+	padding-bottom: 0.44rem;
+	padding-left: 0.07rem;
+	float: left;
+	box-sizing: border-box;
+}
+
+.cityMainPlace> .scroll,
+.mainVedio> .scroll {
+	width: 0.27rem;
+	height: 3rem;
+	float: right;
+	background: #263539;
+}
+
+.zdcj {
+	/*车站信息*/
+	/*城市内容*/
+	/*cityDetail*/
+}
+
+.zdcj .station ul {
+	/* display: inline-block;*/
+	float: left;
+}
+
+.zdcj .station .addMore {
+	float: left;
+}
+
+.zdcj .station ul> li {
+	width: 1.37rem;
+	height: 1.45rem;
+	background-color: #263539;
+	margin: 0;
+	float: left;
+	margin-right: 0.05rem;
+}
+
+.zdcj .station> .addMore {
+	width: 0.59rem;
+	height: 1.45rem;
+	background: #263539;
+}
+
+.zdcj .userCount> i {
+	display: inline-block;
+	width: 0.11rem;
+	height: 0.11rem;
+	background: url("../imgs/user.png") no-repeat center center/100% 100%;
+}
+
+.zdcj .station {
+	height: 1.45rem;
+	/*总占比*/
+}
+
+.zdcj .station .cancel {
+	width: 0.11rem;
+	height: 0.11rem;
+	margin-left: 1.08rem;
+	margin-top: 0.06rem;
+	display: inline-block;
+	background: url("../imgs/cancel.png") no-repeat center center/100% 100%;
+}
+
+.zdcj .station .percent {
+	margin: 0.05rem;
+}
+
+.zdcj .station .percent > p {
+	display: inline-block;
+	color: #51c7bd;
+	font-family: 'HelveticaNeueLTStd-Lt';
+	font-size: 0.14rem;
+}
+
+.zdcj .station .stationDetail {
+	width: 90%;
+	margin: 0 auto;
+	position: relative;
+	top: -0.08rem;
+}
+
+.zdcj .station .stationName {
+	width: 80%;
+	margin: 0 auto;
+	position: relative;
+}
+
+.zdcj .station .userCount {
+	color: #51c7bd;
+	font-size: 0.14rem;
+	font-family: 'HelveticaNeueLTStd-Lt';
+}
+
+.zdcj .station .stationName> i {
+	width: 0.81rem;
+	height: 0.58rem;
+	display: inline-block;
+	background: url("../imgs/outRing.png") no-repeat center center/100% 100%;
+}
+
+.zdcj .station .stationName> b {
+	width: 0.4rem;
+	height: 0.32rem;
+	display: inline-block;
+	background: url("../imgs/tecent.png") no-repeat center center/ auto 100%;
+	position: absolute;
+	top: 0.2rem;
+	left: 0.3rem;
+}
+
+.zdcj .station .stationName> p {
+	color: #82fff4;
+	font-size: 0.14rem;
+}
+
+.zdcj .station .totalCount {
+	width: 0.46rem;
+	height: 0.07rem;
+	border-radius: 0.33rem;
+	margin: 0 auto;
+	background-color: #51c7bd;
+	display: inline-block;
+	position: relative;
+	top: -0.02rem;
+}
+
+.zdcj .station .actualCount {
+	width: 0.3rem;
+	height: 100%;
+	background-color: #5191c7;
+	border-radius: 0.33rem;
+}
+
+.zdcj .station .addMore> i {
+	width: 0.24rem;
+	height: 0.24rem;
+	display: inline-block;
+	background: url("../imgs/addMore.png") no-repeat center center/100% 100%;
+	margin-top: 0.5rem;
+}
+
+.zdcj .itemDetail {
+	/*城市图标*/
+	/*占比*/
+}
+
+.zdcj .itemDetail .itemDetailUl {
+	overflow: hidden;
+}
+
+.zdcj .itemDetail li> ul {
+	height: 0.66rem;
+}
+
+.zdcj .itemDetail li> ul> li {
+	width: 0;
+	height: 0;
+	margin: 0;
+	float: left;
+}
+
+.zdcj .itemDetail .placeIcon {
+	width: 0.62rem;
+	height: 0.62rem;
+	background: url("../imgs/cbd.png") no-repeat center center/100% 100%;
+}
+
+.zdcj .itemDetail .placePercent {
+	width: 1.25rem;
+	height: 100%;
+	text-align: left;
+	margin-left: 0.11rem;
+	padding-top: 0.05rem;
+	box-sizing: border-box;
+}
+
+.zdcj .itemDetail .placePercent .userCount > p {
+	color: #51c7bd;
+	font-family: 'HelveticaNeueLTStd-Lt';
+	font-size: 0.14rem;
+}
+
+.zdcj .itemDetail .placePercent > p {
+	color: #82fff4;
+	font-size: 0.15rem;
+}
+
+.zdcj .itemDetail .placePercent> .percent {
+	margin: 0.04rem 0;
+}
+
+.zdcj .itemDetail .placePercent> .percent> p {
+	display: inline-block;
+	color: #51c7bd;
+	font-size: 0.14rem;
+	font-family: 'HelveticaNeueLTStd-Lt';
+}
+
+.zdcj .itemDetail .totalCount {
+	width: 0.46rem;
+	height: 0.06rem;
+	border-radius: 0.33rem;
+	margin: 0 auto;
+	background-color: #51c7bd;
+	display: inline-block;
+	position: relative;
+	top: -0.02rem;
+}
+
+.zdcj .itemDetail .actualCount {
+	width: 0.3rem;
+	height: 100%;
+	background-color: #5191c7;
+	border-radius: 0.33rem;
+}
+
+
+/*content---重点网元*/
+
+.zdwy .zdwyImg {
+	height: 3.5rem;
+	position: relative;
+}
+
+.zdwy .zdwyImg> i {
+	width: 2.84rem;
+	height: 3.26rem;
+	display: inline-block;
+	background: url("../imgs/relation.png") no-repeat center center/100% 100%;
+}
+
+.zdwy .zdwyImg> div {
+	width: 0.3rem;
+	height: 0.36rem;
+	box-sizing: border-box;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.zdwy .zdwyImg .spgw {
+	top: 1.04rem;
+	left: 1rem;
+}
+
+.zdwy .zdwyImg .mme {
+	top: 1.98rem;
+	left: 1.76rem;
+}
+
+.zdwy .zdwyImg .cgsn {
+	left: 3.55rem;
+	top: 1.04rem;
+}
+
+.zdwy .zdwyImg .sgsn {
+	left: 3.55rem;
+	top: 1.65rem;
+}
+
+.zdwy .zdwyImg .rnc {
+	left: 3.55rem;
+	top: 2.15rem;
+}
+
+.zdwy .zdwyTop3 {
+	height: 1.44rem;
+	text-align: left;
+	font-size: 0.14rem;
+	/*表格样式*/
+}
+
+.zdwy .zdwyTop3> p {
+	margin: 0.11rem 0;
+	color: #82fff4;
+}
+
+.zdwy .zdwyTop3> table {
+	width: 4.83rem;
+	box-sizing: border-box;
+	border: 1px solid #2e5c5c;
+	color: #51c7bd;
+}
+
+.zdwy .zdwyTop3> table> tbody> tr {
+	height: 0.3rem;
+}
+
+.zdwy .zdwyTop3> table> tbody> tr> td:first-child {
+	width: 1.3rem;
+	text-align: center;
+	background-color: #212f32;
+}
+
+.zdwy .zdwyTop3> table> tbody> tr> td:last-child> p {
+	display: inline-block;
+	margin-left: 0.5rem;
+}
+
+.zdwy .zdwyTop3> table> tbody> tr> td:last-child> p> i {
+	display: inline-block;
+	width: 0.11rem;
+	height: 0.11rem;
+	background: url("../imgs/user.png") no-repeat center center/100% 100%;
+}
+
+.zdwy .zdwyTop3> table> tbody> tr> td:last-child> .percent {
+	display: inline-block;
+	margin: 0 0.05rem;
+}
+
+.zdwy .zdwyTop3> table> tbody> tr> td:last-child> .percent> .totalCount {
+	width: 1.45rem;
+	height: 0.07rem;
+	border-radius: 0.33rem;
+	background-color: #51c7bd;
+	display: inline-block;
+	margin: 0 0.04rem;
+	position: relative;
+	top: -0.02rem;
+}
+
+.zdwy .zdwyTop3> table> tbody> tr> td:last-child> .percent> p {
+	display: inline-block;
+}
+
+.zdwy .zdwyTop3> table> tbody> tr> td:last-child> .percent> .totalCount> .actualCount {
+	width: 44.44444%;
+	height: 100%;
+	background-color: #5191c7;
+	border-radius: 0.33rem;
+}
+
+
+/*content---重点SP*/
+
+.zdsp {
+	/*头部*/
+	/*详情*/
+}
+
+.zdsp .mainVedio {
+	margin-top: 0.5rem;
+	text-align: left;
+}
+
+.zdsp .media {
+	height: 1.45rem;
+	/*总占比*/
+}
+
+.zdsp .media .cancel {
+	width: 0.11rem;
+	height: 0.11rem;
+	margin-left: 1.08rem;
+	margin-top: 0.06rem;
+	display: inline-block;
+	background: url("../imgs/cancel.png") no-repeat center center/100% 100%;
+}
+
+.zdsp .media .mediaDetail {
+	position: relative;
+	top: -0.08rem;
+	width: 90%;
+	margin: 0 auto;
+}
+
+.zdsp .media .mediaName {
+	width: 80%;
+	margin: 0 auto;
+	position: relative;
+}
+
+.zdsp .media .mediaName> i {
+	width: 0.81rem;
+	height: 0.58rem;
+	display: inline-block;
+	background: url("../imgs/outRing.png") no-repeat center center/100% 100%;
+}
+
+.zdsp .media .mediaName> b {
+	width: 0.4rem;
+	height: 0.32rem;
+	display: inline-block;
+	background: url("../imgs/tecent.png") no-repeat center center/ auto 100%;
+	position: absolute;
+	top: 0.2rem;
+	left: 0.3rem;
+}
+
+.zdsp .media .mediaName> p {
+	color: #82fff4;
+	font-size: 0.14rem;
+}
+
+.zdsp .media .percent {
+	margin: 0.05rem 0;
+}
+
+.zdsp .media .percent > p {
+    display: inline-block;
+    color: #51c7bd;
+    font-family: 'HelveticaNeueLTStd-Lt';
+    font-size: 0.14rem;
+}
+
+.zdsp .media .userCount {
+    color: #51c7bd;
+    font-size: 0.14rem;
+    font-family: 'HelveticaNeueLTStd-Lt';
+}
+
+.zdsp .media .totalCount {
+	width: 0.46rem;
+	height: 0.07rem;
+	border-radius: 0.33rem;
+	margin: 0 auto;
+	background-color: #51c7bd;
+	display: inline-block;
+	position: relative;
+	top: -0.02rem;
+}
+
+.zdsp .media .actualCount {
+	width: 0.3rem;
+	height: 100%;
+	background-color: #5191c7;
+	border-radius: 0.33rem;
+}
+
+.zdsp .media .addMore> i {
+	width: 0.24rem;
+	height: 0.24rem;
+	display: inline-block;
+	background: url("../imgs/addMore.png") no-repeat center center/100% 100%;
+	margin-top: 0.5rem;
+}
+
+.zdsp .media ul {
+	/* display: inline-block;*/
+	float: left;
+}
+
+.zdsp .media .addMore {
+	float: right;
+}
+
+.zdsp .media ul> li {
+	width: 1.37rem;
+	height: 1.45rem;
+	background-color: #293c42;
+	margin: 0;
+	float: left;
+	margin-right: 0.05rem;
+}
+
+.zdsp .media> .addMore {
+	width: 0.59rem;
+	height: 1.45rem;
+	background: #263539;
+}
+
+.zdsp .spDetail {
+	width: 100%;
+	display: inline-block;
+}
+
+.zdsp .spDetail> ul {
+	/*height: 3.2rem;*/
+	overflow: hidden;
+}
+
+.zdsp .spDetail> ul> li {
+	width: 100%;
+	margin-bottom: 0.05rem;
+	float: left;
+}
+
+.zdsp .spDetail> ul> li> h5 {
+	font-size: 0.18rem;
+	display: inline-block;
+	margin-left: 0.2rem;
+	vertical-align: top;
+	color: #b6fff8;
+}
+
+.zdsp .spDetail> ul> li> h5> i {
+	width: 0.08rem;
+	height: 0.05rem;
+	display: inline-block;
+	background-color: #65fff1;
+	vertical-align: middle;
+	margin-top: -0.025rem;
+	box-shadow: 0rem 0rem 0.1rem #65fff1;
+}
+
+.zdsp .spDetail> ul> li> ul {
+	display: inline-block;
+	/*width: 82%;*/
+}
+
+.zdsp .spDetail> ul> li> ul> li {
+	margin: 0;
+	float: left;
+	height: 1.09rem;
+	width: 1.79rem;
+	padding-left: 0.27rem;
+	box-sizing: border-box;
+}
+
+.zdsp .spDetail> ul> li> ul> li> .newsIcon {
+	display: inline-block;
+	vertical-align: top;
+	line-height: 0;
+}
+
+.zdsp .spDetail> ul> li> ul> li> .newsIcon> i {
+	width: 0.32rem;
+	height: 0.32rem;
+	background: url("../imgs/tecentVedio.png") no-repeat center center/100% 100%;
+	display: inline-block;
+}
+
+.zdsp .spDetail> ul> li> ul> li .placePercent {
+	display: inline-block;
+	font-size: 0.15rem;
+	text-align: left;
+	margin-left: 0.15rem;
+}
+
+.zdsp .spDetail> ul> li> ul> li .placePercent > p {
+	color: #82fff4;
+	font-size: 0.15rem;
+}
+
+.zdsp .spDetail> ul> li> ul> li .placePercent> .percent {
+	display: inline-block;
+	margin: 0.05rem 0;
+}
+
+.zdsp .spDetail> ul> li> ul> li .placePercent> .percent > p {
+	display: inline-block;
+	color: #51c7bd;
+	font-size: 0.14rem;
+	font-family: 'HelveticaNeueLTStd-Lt';
+}
+
+.zdsp .spDetail> ul> li> ul> li .placePercent> .userCount {
+	color: #51c7bd;
+	font-size: 0.14rem;
+	font-family: 'HelveticaNeueLTStd-Lt';
+}
+
+.zdsp .spDetail> ul> li> ul> li .placePercent> .percent> .totalCount {
+	width: 0.46rem;
+	height: 0.07rem;
+	border-radius: 0.33rem;
+	background-color: #51c7bd;
+	display: inline-block;
+	position: relative;
+	top: -0.02rem;
+}
+
+.zdsp .spDetail> ul> li> ul> li .placePercent> .percent> .totalCount> .actualCount {
+	width: 0.3rem;
+	height: 100%;
+	background-color: #5191c7;
+	border-radius: 0.33rem;
+}
+
+
+/*# sourceMappingURL=back.css.map */

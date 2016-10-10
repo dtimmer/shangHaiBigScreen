@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>上海联通业务质量管理平台</title>
+		<link rel="stylesheet" type="text/css" href="../css/common.css">
+		<link rel="stylesheet" type="text/css" href="../css/index.css">
+		<link rel="stylesheet" type="text/css" href="../css/back.css">
+		<script type="text/javascript" src="../lib/jquery-3.1.0.min.js"></script>
+		<script type="text/javascript" src="../js/common.js"></script>
+		<script src="../test_data/activeUserNumber.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../test_data/allRateKqi.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../test_data/alertInformation.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../test_data/importantKqi.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../test_data/importantaffectedUserNum.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../test_data/importantaffectedWorkOrder.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../test_data/allNetAlertInformation.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../test_data/sceneUserNum.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../test_data/childSceneUserNum.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../test_data/top3UserNum.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../test_data/spUserNum.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../test_data/protocalUserNum.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../test_data/alarmNum.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<header>
+			<div class="title center">
+				<a onclick="PageInit()"><i></i>上海联通业务质量管理平台</a>
+			</div>
+			<div class="f_left">
+				<div class="f_left">舆情：</div>
+				<p class="f_left information"></p>
+			</div>
+			<div class="f_right">
+				<div class="countDownTimer f_left">
+					<div class="lastUpdateTime">更新截止时间:<span class="font_num"></span><em class="font_num"></em></div>
+					<div class="nextUpdateTime">下次更新倒计时:<span class="font_num"></span></div>
+				</div>
+				<div class="setAndImport f_left">
+					<i class="import"></i>
+					<i class="setting"></i>
+				</div>
+			</div>
+		</header>
+		<article>
+			<div class="animation">
+				<canvas id="canvas" width="1500" height="300"></canvas>
+			</div>
+			<div class="loudou">
+				<div id="loudou_hype_container" aria-live="polite">
+				</div>
+				<div class="loudou_data">
+					<div class="all_data">业务质量<br />告警数(收敛前)<span></span></div>
+					<div class="cj_data">重点场景<span></span></div>
+					<div class="wy_data">重点网元<span></span></div>
+					<div class="sp_data">重点SP<span></span></div>
+				</div>
+			</div>
+			<div class="line_graph">
+				<div class="user_pie f_left"></div>
+				<div class="active_user_number f_left">
+					<div class="f_left user_green">
+						<h3 class="font_chart_up_down"><i></i>4G</h3>
+						<h4 class="font_chart"><font></font><span><i></i></span></h4>
+						<div class="user4"></div>
+					</div>
+					<div class="f_left user_blue">
+						<h3 class="font_chart_up_down"><i></i>3G</h3>
+						<h4 class="font_chart"><font></font><span><i></i></span></h4>
+						<div class="user3"></div>
+					</div>
+					<div class="f_left user_violet">
+						<h3 class="font_chart_up_down"><i></i>2G</h3>
+						<h4 class="font_chart"><font></font><span><i></i></span></h4>
+						<div class="user2"></div>
+					</div>
+				</div>
+				<div class="active_flower f_right">
+					<span>流量</span>
+					<div class="f_left flower_first">
+						<h3 class="font_chart_up_down"><i></i>4G</h3>
+						<h4 class="font_chart"><font></font><span><i></i></span></h4>
+						<div class="flower4"></div>
+					</div>
+					<div class="f_left flower_last">
+						<h3 class="font_chart_up_down"><i></i>3G</h3>
+						<h4 class="font_chart"><font></font><span><i></i></span></h4>
+						<div class="flower3"></div>
+					</div>
+				</div>
+			</div>
+			<ul class="main_card">
+				<li class="controll play"></li>
+				<!--重点场景-->
+				<li class="zdcj">
+					<div class="container">
+						<!--反面-->
+						<div class="back">
+							<!--头部-->
+							<div class="header">
+								<ul>
+									<li class="title">
+										<h3><i></i><span>重点场景</span></h3>
+									</li>
+									<li class="processing">
+										<p><i></i><span>处理中</span></p>
+										<span></span>
+									</li>
+									<li class="bnsRepaire">
+										<p><i></i><span>业务修复</span></p>
+										<span></span>
+									</li>
+									<li class="userCount">
+										<p><i></i><span>影响用户数</span></p>
+										<span></span>
+									</li>
+								</ul>
+							</div>
+							<!--内容-->
+							<div class="content">
+								<div class="station">
+									<ul>
+									</ul>
+									<p class="addMore">
+										<i></i>
+									</p>
+								</div>
+								<!--主要城市-->
+								<div class="cityMainPlace">
+									<!--详情-->
+									<div class="itemDetail">
+										<ul class="itemDetailUl">
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--正面-->
+						<div class="front">
+							<h3><i></i>重点场景</h3>
+							<div class="front_main">
+								<h4></h4>
+								<div class="circle_data">
+									<p class="font_chart"></p>
+									<div class="circle_main"></div>
+									<div class="circle_main2"></div>
+									<p class="circle_grade"></p>
+								</div>
+							</div>
+							<div class="front_bot">
+								<div class="front_bot_l">
+									<h5><i></i>影响用户数</h5>
+									<p class="font_chart_up_down"></p>
+								</div>
+								<div class="front_bot_r">
+									<h5><i></i>工单状态</h5>
+									<ul>
+										<li class="">
+											<span></span> 处理中
+											<font class="font_chart_up_down"></font>
+										</li>
+										<li class="">
+											<span></span> 业务修复
+											<font class="font_chart_up_down"></font>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<!--重点网元-->
+				<li class="zdwy">
+					<div class="container">
+						<!--反面-->
+						<div class="back ">
+							<!--头部-->
+							<div class="header">
+								<ul>
+									<li class="title">
+										<h3><i></i><span>重点网元</span></h3>
+									</li>
+									<li class="processing">
+										<p><i></i><span>处理中</span></p>
+										<span></span>
+									</li>
+									<li class="bnsRepaire">
+										<p><i></i><span>业务修复</span></p>
+										<span></span>
+									</li>
+									<li class="userCount">
+										<p><i></i><span>影响用户数</span></p>
+										<span></span>
+									</li>
+								</ul>
+							</div>
+							<!--内容-->
+							<div class="content">
+								<div class="zdwyImg">
+									<i></i>
+									<div class="spgw"></div>
+									<div class="mme"></div>
+									<div class="cgsn"></div>
+									<div class="sgsn"></div>
+									<div class="rnc"></div>
+								</div>
+								<!--top 3-->
+								<div class="zdwyTop3">
+									<p>TOP 3警告网元</p>
+									<table>
+										<tbody>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						<div class="front">
+							<h3><i></i>重点网元</h3>
+							<div class="front_main">
+								<h4></h4>
+								<div class="circle_data">
+									<p class="font_chart"></p>
+									<div class="circle_main"></div>
+									<div class="circle_main2"></div>
+									<p class="circle_grade"></p>
+								</div>
+							</div>
+							<div class="front_bot">
+								<div class="front_bot_l">
+									<h5><i></i>影响用户数</h5>
+									<p class="font_chart_up_down"></p>
+								</div>
+								<div class="front_bot_r">
+									<h5><i></i>工单状态</h5>
+									<ul>
+										<li class="">
+											<span></span> 处理中
+											<font class="font_chart_up_down"></font>
+										</li>
+										<li class="">
+											<span></span> 业务修复
+											<font class="font_chart_up_down"></font>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<!--重点sp-->
+				<li class="zdsp">
+					<div class="container">
+						<!--反面-->
+						<div class="back ">
+							<!--头部-->
+							<div class="header">
+								<ul>
+									<li class="title">
+										<h3><i></i><span>重点SP</span></h3>
+									</li>
+									<li class="processing">
+										<p><i></i><span>处理中</span></p>
+										<span></span>
+									</li>
+									<li class="bnsRepaire">
+										<p><i></i><span>业务修复</span></p>
+										<span></span>
+									</li>
+									<li class="userCount">
+										<p><i></i><span>影响用户数</span></p>
+										<span></span>
+									</li>
+								</ul>
+							</div>
+							<!--内容-->
+							<div class="content">
+								<div class="media">
+									<ul>
+									</ul>
+									<p class="addMore">
+										<i></i>
+									</p>
+								</div>
+								<!--主要媒体-->
+								<div class="mainVedio">
+									<!--详情-->
+									<div class="spDetail">
+										<ul>
+										</ul>
+									</div>
+								</div>
+
+							</div>
+						</div>
+
+						<div class="front">
+							<h3><i></i>重点SP</h3>
+							<div class="front_main">
+								<h4></h4>
+								<div class="circle_data">
+									<p class="font_chart"></p>
+									<div class="circle_main"></div>
+									<div class="circle_main2"></div>
+									<p class="circle_grade"></p>
+								</div>
+							</div>
+							<div class="front_bot">
+								<div class="front_bot_l">
+									<h5><i></i>影响用户数</h5>
+									<p class="font_chart_up_down"></p>
+								</div>
+								<div class="front_bot_r">
+									<h5><i></i>工单状态</h5>
+									<ul>
+										<li class="">
+											<span></span> 处理中
+											<font class="font_chart_up_down"></font>
+										</li>
+										<li class="">
+											<span></span> 业务修复
+											<font class="font_chart_up_down"></font>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</article>
+		<footer>
+			<ul>
+				<li class="sel">全网</li>
+				<li class="font_chart_up_down">4G<span class="font_chart"></span></li>
+				<li class="font_chart_up_down">3G<span class="font_chart"></span></li>
+			</ul>
+			<div>
+				<div class="foot_line">
+					<h3>
+					<i></i>
+					<span class="line_name"></span>
+					<span class="line_grade"></span>
+					<span class="line_last font_chart"></span>
+					<span class="font_chart_up_down"><i></i></span>
+				</h3>
+					<div class="data_line"></div>
+				</div>
+				<div class="foot_line">
+					<h3>
+					<i></i>
+					<span class="line_name"></span>
+					<span class="line_grade"></span>
+					<span class="line_last font_chart"></span>
+					<span class="font_chart_up_down"><i></i></span>
+				</h3>
+					<div class="data_line"></div>
+				</div>
+				<div class="foot_line">
+					<h3>
+					<i></i>
+					<span class="line_name"></span>
+					<span class="line_grade"></span>
+					<span class="line_last"></span>
+					<span class="font_chart_up_down"><i></i></span>
+				</h3>
+					<div class="data_line"></div>
+				</div>
+				<div class="foot_line">
+					<h3>
+					<i></i>
+					<span class="line_name"></span>
+					<span class="line_grade"></span>
+					<span class="line_last"></span>
+					<span class="font_chart_up_down"><i></i></span>
+				</h3>
+					<div class="data_line"></div>
+				</div>
+			</div>
+		</footer>
+		<script type="text/javascript" charset="utf-8" src="../lib/loudou/loudou_hype_generated_script.js?73909"></script>
+		<script src="../lib/mousewheel.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../lib/easyscroll.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../lib/echarts.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../lib/radialIndicator.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="../js/config.js"></script>
+		<script src="../js/index.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/canvas.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/index_data.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+		</script>
+	</body>
+
+</html>

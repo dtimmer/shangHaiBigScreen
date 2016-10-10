@@ -1,0 +1,114 @@
+body {
+	-webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+
+.slider1 {
+	width: 20rem;
+	height: 10px;
+	border-radius: 5px;
+	/*background: #00aaff;
+	position: relative;*/
+}
+
+.slider1 > div {
+	height: 100%;
+}
+
+.slider1 > div > div {
+	height: 100%;
+	float: left;
+	position: relative;
+}
+
+.slider1 > div > div:first-child {
+	border-radius: 5px 0 0 5px; 
+}
+
+.slider1 > div > div:last-child {
+	border-radius: 0 5px 5px 0;
+}
+
+.slider1 span {
+	position: absolute;
+	display: block;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 4px;
+	border-color: #000 transparent transparent transparent;
+	top: -4.8px;
+	margin-right: -4px;
+	right: 0;
+	cursor: move;
+}
+
+.slider1 .modal {
+	left: 60%;
+}
+
+.slider1 .moda2 {
+	right: 20%;
+	margin-right: -4px;
+}
+
+.slider1 em {
+	position: absolute;
+	bottom: -16px;
+	margin-right: -4px;
+	right: 0;
+	font-style: normal;
+}
+
+.slider2 > div {
+	height: 10px;
+	border-radius: 5px;
+	position: relative;
+	/*overflow: hidden;*/
+	font-size: 8.5px;
+	color: #fff;
+}
+
+.slider2 > div > div {
+	float: left;
+	position: relative;
+}
+
+.slider2 > div > div:first-child {
+	/*border-radius: 50% 0 0 50%;*/
+	border-radius: 5px 0 0 5px;
+}
+
+.slider2 > div > div:last-child {
+	/*border-radius: 0 5px 5px 0;*/
+	border-radius: 0 5px 5px 0;
+}
+
+.slider2 > div > div:last-child div:last-child {
+	border: none;
+}
+
+.slider2 > div > div > div {
+	width: 28px;
+	text-align: center;
+	line-height: 10px;
+	border-right: 1px solid rgba(0, 0, 0, 0.6);
+	float: left;
+	box-sizing: border-box;
+}
+
+.slider2 > div > div > span {
+	cursor: move;
+	position: absolute;
+	display: block;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 4px;
+	border-color: #000 transparent transparent transparent;
+	top: -4.8px;
+	margin-right: -4px;
+	right: 0;
+}

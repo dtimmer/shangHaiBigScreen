@@ -1,0 +1,634 @@
+.back{
+  color: #fff;
+  font-size: 0.2rem;  /**back**/
+
+  &>.header{
+    height:0.65rem;
+    background-color: #293c42;
+
+    .title>h3{
+      line-height: 0.65rem;
+    }
+
+    &>ul>li{
+      height:100%;
+      display: inline-block;
+      margin: 0;
+      vertical-align: middle;
+      width:21%;
+      font-size: 0.12rem;
+
+    }
+
+    &>ul>li:first-child{
+      width:32%;
+    }
+
+  }
+}
+/*头部信息， title, 处理中， 业务修复，影响用户数*/
+
+.title,.processing,.bnsRepaire,.userCount{
+  >h3>i{
+    width:0.3rem;
+    height:0.3rem;
+    display: inline-block;
+    margin: 0 0.08rem;
+  }
+
+  >span{
+    font-size: 0.23rem;  /* font-size: 0.115rem;*/
+    margin-top:0.06rem;
+    display: inline-block;
+  }
+}
+
+.processing,.bnsRepaire,.userCount{
+  >p>i{
+    display: inline-block;
+    width:0.11rem;
+    height:0.11rem;
+    margin-right: 0.05rem;
+  }
+}
+
+/*重点场景--背景*/
+.zdcj {
+  .title > h3 > i {
+    background: url("../imgs/zdcj.png") no-repeat center center / 100% 100%;
+    object-fit: cover;
+  }
+}
+/*重点网元--背景*/
+.zdwy {
+  .title > h3 > i {
+    background: url("../imgs/zdwy.png") no-repeat center center / 100% 100%;
+    object-fit: cover;
+  }
+}
+/*重点SP--背景*/
+.zdsp {
+  .title > h3 > i {
+    background: url("../imgs/zdsp.png") no-repeat center center / 100% 100%;
+    object-fit: cover;
+  }
+}
+/*重点场景，重点网元，重点SP，处理中，业务修复，影响用户*/
+.zdcj,.zdwy,.zdsp{
+
+  .processing>p>i{
+    background-color: #5191c7;
+  }
+
+  .bnsRepaire>p>i{
+    background-color: #51c7bd;
+  }
+
+  .userCount>p>i {
+    background: url("../imgs/user.png") no-repeat center center / 100% 100%;
+  }
+}
+
+/*content---重点场景*/
+
+/*框架结构*/
+.content{
+  width:92%;
+  margin:0 auto;
+  margin-top: 0.32rem;
+  font-size: 0.14rem;
+}
+
+
+.cityMainPlace,.mainVedio{
+  margin-top: 0.43rem;
+  height:3rem;
+
+
+  >.itemDetail{
+    width:4.52rem;
+    float: left;
+
+
+    >ul>li{
+      width:2.2rem;
+      height:0.66rem;
+      margin: 0;
+      margin-bottom:0.38rem;
+      margin-right:0.05rem;
+      /*background: #263539;*/
+      float:left;
+
+    }
+
+  }
+
+
+  >.scroll{
+    width:0.27rem;
+    height:3rem;
+    float: right;
+    background: #263539;
+  }
+}
+
+
+.zdcj{
+
+  .station{
+    ul{
+      /* display: inline-block;*/
+      float: left;
+    }
+    .addMore{
+      float: right;
+    }
+
+    ul>li{
+      width:1.37rem;
+      height:1.45rem;
+      background-color: #263539;
+      margin:0;
+      float:left;
+      margin-right:0.05rem;
+    }
+
+    >.addMore{
+      width:0.59rem;
+      height:1.45rem;
+      background: #263539;
+    }
+
+  }
+
+  .userCount{
+    >i{
+      display: inline-block;
+      width:0.11rem;
+      height:0.11rem;
+      background: url("../imgs/user.png") no-repeat center center / 100% 100%;
+    }
+  }
+
+  /*车站信息*/
+  .station{
+    height:1.45rem;
+    .cancel{
+      width:0.11rem;
+      height:0.11rem;
+      margin-left: 80%;
+      margin-top: 0.06rem;
+      display: inline-block;
+      background: url("../imgs/cancel.png") no-repeat center center / 100% 100%;
+
+    }
+
+    .percent{
+      margin:0.05rem;
+    }
+
+    .stationDetail{
+      width:90%;
+      margin:0 auto;
+      position: relative;
+      top:-0.08rem;
+    }
+
+    .stationName{
+
+      width:80%;
+      margin: 0 auto;
+      position: relative;
+
+      >i{
+        width:0.81rem;
+        height:0.58rem;
+        display: inline-block;
+        background: url("../imgs/outRing.png") no-repeat center center / 100% 100%;
+      }
+
+      >b{
+        width:0.35rem;
+        height:0.35rem;
+        display: inline-block;
+        background: url("../imgs/tecent.png") no-repeat center center / 100% 100%;
+        position: absolute;
+        top: 0.2rem;
+        left:0.33rem;
+      }
+
+      >p{
+        margin-top:0.05rem;
+      }
+    }
+
+    /*总占比*/
+    .totalCount{
+      width:0.46rem;
+      height:0.07rem;
+      border-radius: 0.33rem;
+      margin: 0 auto;
+      background-color: #51c7bd;
+      display: inline-block;
+      position: relative;
+      top:-0.02rem;
+    }
+
+    .actualCount{
+      width:0.3rem;
+      height:100%;
+      background-color: #5191c7;
+      border-radius: 0.33rem;
+    }
+
+    .addMore{
+      >i{
+        width:0.24rem;
+        height:0.24rem;
+        display: inline-block;
+
+        background: url("../imgs/addMore.png") no-repeat center center / 100% 100%;
+        margin-top: 0.5rem;
+      }
+    }
+
+  }
+
+  /*城市内容*/
+  /*cityDetail*/
+  .itemDetail{
+    li>ul{
+      height:0.66rem;
+      >li{
+        width:0;
+        height:0;
+        margin: 0;
+        float: left;
+      }
+
+    }
+
+    /*城市图标*/
+    .placeIcon{
+      width:0.66rem;
+      height:0.66rem;
+      background: url("../imgs/cbd.png") no-repeat center center / 100% 100%;
+    }
+
+    /*占比*/
+    .placePercent{
+      width:50%;
+      height:80%;
+      text-align: left;
+      margin-left: 12%;
+      margin-top: 4%;
+
+      >.percent{
+        margin: 0.05rem 0;
+      }
+    }
+
+    .totalCount{
+      width:0.46rem;
+      height:0.07rem;
+      border-radius: 0.33rem;
+      margin: 0 auto;
+      background-color: #51c7bd;
+      display: inline-block;
+      position: relative;
+      top:-0.02rem;
+    }
+
+    .actualCount{
+      width:0.3rem;
+      height:100%;
+      background-color: #5191c7;
+      border-radius: 0.33rem;
+    }
+
+  }
+}
+
+
+
+
+/*content---重点网元*/
+.zdwy{
+  .zdwyImg{
+    height:3.5rem;
+    position: relative;
+
+    >i{
+      width:2.84rem;
+      height: 3.26rem;
+      display: inline-block;
+      background: url("../imgs/relation.png") no-repeat center center / 100% 100%;
+    }
+
+    >div{
+      width:0.3rem;
+      height:0.36rem;
+      box-sizing: border-box;
+      position: absolute;
+      top:0;
+      left:0;
+    }
+
+    .spgw{
+      top:1.04rem;
+      left:1rem;
+    }
+    .mme{
+      top:1.98rem;
+      left:1.76rem;
+    }
+    .cgsn{
+      left:3.55rem;
+      top:1.04rem;
+    }
+    .sgsn{
+      left:3.55rem;
+      top:1.65rem;
+    }
+    .rnc{
+      left:3.55rem;
+      top:2.15rem;
+    }
+  }
+
+  .zdwyTop3{
+    height:1.44rem;
+    text-align: left;
+    font-size: 0.14rem;
+
+    >p{
+      margin: 0.11rem;
+    }
+
+
+   /*表格样式*/
+    >table{
+      width:4.83rem;
+      box-sizing: border-box;
+      border:1px solid #fff;
+
+      >tbody{
+
+        >tr{
+          height:0.3rem;
+
+          >td:first-child{
+            width:1.3rem;
+            text-align: center;
+            background-color: #212f32;
+          }
+
+          >td:last-child{
+            >p{
+              display: inline-block;
+              margin-left: 0.5rem;
+              >i{
+                display: inline-block;
+                width:0.11rem;
+                height:0.11rem;
+                background: url("../imgs/user.png") no-repeat center center / 100% 100%;
+              }
+            }
+
+            >.percent{
+              display: inline-block;
+              margin:0 0.05rem;
+              >.totalCount{
+                width:0.46rem;
+                height:0.07rem;
+                border-radius: 0.33rem;
+                background-color: #51c7bd;
+                display: inline-block;
+                margin:0 0.5rem;
+                position: relative;
+                top:-0.02rem;
+
+                >.actualCount{
+                  width:0.3rem;
+                  height:100%;
+                  background-color: #5191c7;
+                  border-radius: 0.33rem;
+                }
+              }
+            }
+
+          }
+
+        }
+      }
+
+    }
+  }
+}
+
+/*content---重点SP*/
+
+.zdsp{
+  .mainVedio{
+    margin-top: 0.5rem;
+  }
+
+  /*头部*/
+  .media{
+    height:1.45rem;
+    .cancel{
+      width:0.11rem;
+      height:0.11rem;
+      margin-left: 80%;
+      margin-top: 0.06rem;
+      display: inline-block;
+      background: url("../imgs/cancel.png") no-repeat center center / 100% 100%;
+
+    }
+
+    .mediaDetail{
+      position: relative;
+      top:-0.08rem;
+      width:90%;
+      margin:0 auto;
+
+    }
+
+    .mediaName{
+
+      width:80%;
+      margin: 0 auto;
+      position: relative;
+
+      >i{
+        width:0.81rem;
+        height:0.58rem;
+        display: inline-block;
+        background: url("../imgs/outRing.png") no-repeat center center / 100% 100%;
+      }
+
+      >b{
+        width:0.35rem;
+        height:0.35rem;
+        display: inline-block;
+        background: url("../imgs/tecent.png") no-repeat center center / 100% 100%;
+        position: absolute;
+        top: 0.2rem;
+        left:0.33rem;
+      }
+
+      >p{
+        margin-top:0.05rem;
+      }
+    }
+
+    .percent{
+      margin:0.05rem 0;
+    }
+    /*总占比*/
+    .totalCount{
+      width:0.46rem;
+      height:0.07rem;
+      border-radius: 0.33rem;
+      margin: 0 auto;
+      background-color: #51c7bd;
+      display: inline-block;
+      position: relative;
+      top:-0.02rem;
+    }
+
+    .actualCount{
+      width:0.3rem;
+      height:100%;
+      background-color: #5191c7;
+      border-radius: 0.33rem;
+    }
+
+    .addMore{
+      >i{
+        width:0.24rem;
+        height:0.24rem;
+        display: inline-block;
+
+        background: url("../imgs/addMore.png") no-repeat center center / 100% 100%;
+        margin-top: 0.5rem;
+      }
+    }
+
+      ul{
+        /* display: inline-block;*/
+        float: left;
+      }
+      .addMore{
+        float: right;
+      }
+
+      ul>li{
+        width:1.37rem;
+        height:1.45rem;
+        background-color: #293c42;
+        margin:0;
+        float:left;
+        margin-right:0.05rem;
+      }
+
+      >.addMore{
+        width:0.59rem;
+        height:1.45rem;
+        background: #263539;
+      }
+
+  }
+
+  /*详情*/
+  .spDetail{
+    width:93%;
+    display: inline-block;
+
+    >ul{
+
+      height:3.2rem;
+      >li{
+
+        width:100%;
+        margin-bottom: 0.05rem;
+        float: left;
+
+        >h5{
+          font-size: 0.18rem;
+          display: inline-block;
+          margin-left:0.2rem;
+          vertical-align: top;
+
+          >i{
+            width:0.08rem;
+            height:0.05rem;
+            display: inline-block;
+            background-color: #65fff1;
+          }
+        }
+
+        >ul{
+          display: inline-block;
+          width:82%;
+          >li{
+            margin:0;
+            float: left;
+            height:0.72rem;
+            width:1.6rem;
+           /* background-color: #293c42;*/
+            margin-left: 0.2rem;
+            margin-bottom: 0.2rem;
+
+
+            >.newsIcon{
+              display: inline-block;
+              vertical-align: top;
+              >i{
+                width: 0.32rem;
+                height:0.32rem;
+                background:url("../imgs/tecentVedio.png") no-repeat center center / 100% 100%;
+                display: inline-block;
+              }
+            }
+
+            .placePercent{
+
+              display: inline-block;
+              font-size: 0.15rem;
+              text-align: left;
+              margin-left: 0.15rem;
+
+              >.percent{
+                display: inline-block;
+                margin:0.05rem 0;
+                >.totalCount{
+                  width:0.46rem;
+                  height:0.07rem;
+                  border-radius: 0.33rem;
+                  background-color: #51c7bd;
+                  display: inline-block;
+                  position: relative;
+                  top:-0.02rem;
+
+                  >.actualCount{
+                    width:0.3rem;
+                    height:100%;
+                    background-color: #5191c7;
+                    border-radius: 0.33rem;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+  }
+}
+
+
+
+
+

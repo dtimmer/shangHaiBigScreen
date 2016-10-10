@@ -1,0 +1,147 @@
+/* 清除内外边距 */
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, /* structural elements 结构元素 */
+dl, dt, dd, ul, ol, li, /* list elements 列表元素 */
+pre, /* text formatting elements 文本格式元素 */
+fieldset, lengend, button, input, textarea, /* form elements 表单元素 */
+th, td { /* table elements 表格元素 */
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 { font-size: 0.3rem; font-weight: normal;}
+
+address, cite, dfn, em, var { font-style: normal; } /* 将斜体扶正 */
+code, kbd, pre, samp, tt { font-family: "Courier New", Courier, monospace; } /* 统一等宽字体 */
+small { font-size: 0.3rem; } /* 小于 12px 的中文很难阅读，让 small 正常化 */
+
+/* 重置列表元素 */
+ul, ol { list-style: none; }
+
+/* 重置文本格式元素 */
+a {
+	text-decoration: none;
+	color: #000;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: #000;
+}
+
+abbr[title], acronym[title] { /* 注：1.ie6 不支持 abbr; 2.这里用了属性选择符，ie6 下无效果 */
+    border-bottom: 1px dotted;
+    cursor: help;
+}
+
+q:before, q:after { content: ''; }
+
+/* 重置表单元素 */
+legend { color: #000; } /* for ie6 */
+fieldset, img { border: none; } /* img 搭车：让链接里的 img 无边框 */
+/* 注：optgroup 无法扶正 */
+button, input, select, textarea {
+    font-size: 100%; /* 使得表单元素在 ie 下能继承字体大小 */
+}
+
+/* 重置表格元素 */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* 重置 hr */
+hr {
+    border: none;
+    height: 1px;
+    background: #000;
+}
+
+/* 让非ie浏览器默认也显示垂直滚动条，防止因滚动条引起的闪烁 */
+html {
+	overflow: hidden;
+	height: 100%;
+	background: #fff;
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+}
+
+body {
+	height: 10.8rem;
+	overflow: hidden;
+	position: fixed;
+	top: 50%;
+	margin-top: -5.4rem;
+	width: 19.2rem;
+	font-size: 0.3rem;
+	font-family: '方正兰亭';
+}
+
+/*适配1024屏幕分辨率*/
+/*@media screen and (max-width: 1600px) {
+	html {
+		font-size: 53.333333333px;
+	}
+}*/
+
+/*适配1920屏幕分辨率*/
+/*@media screen and (min-width: 1601px) {
+	html {
+		font-size: 100px;
+	}
+}*/
+
+.center {
+	text-align: center;
+}
+
+.f_left {
+	float: left;
+}
+
+.f_right {
+	float: right;
+}
+
+.clear {
+	clear: both;
+}
+
+.clearfix:after {
+	content: "";
+	clear: both;
+}
+
+/*数字字母字体设置*/
+.font_num {
+	font-family: 'Century Gothic';
+}
+
+.font_chart {
+	font-family: 'HelveticaNeueLTStd-Roman';
+}
+
+.font_chart_up_down {
+	font-family: 'HelveticaNeueLTStd-Lt';
+}
+
+@font-face {
+	font-family: '方正兰亭';
+	src: url('../fonts/lantingGBK.TTF');
+}
+
+@font-face {
+	font-family: 'Century Gothic';
+	src: url('../fonts/GOTHIC.TTF');
+}
+
+@font-face {
+	font-family: 'HelveticaNeueLTStd-Lt';
+	src: url('../fonts/HelveticaNeueLTStd-Lt.otf');
+}
+
+@font-face {
+	font-family: 'HelveticaNeueLTStd-Roman';
+	src: url('../fonts/HelveticaNeueLTStd-Roman.otf');
+}
