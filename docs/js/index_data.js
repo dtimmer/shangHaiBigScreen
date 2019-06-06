@@ -503,7 +503,7 @@ function setSceneUserNum(data) {
 	data.data.forEach(function(v, i) {
 		var temp = `<li>
 			<ul>
-				<li class="placeIcon" style="background-image: url(${basePath + "pages/" + v.icon})"></li>
+				<li class="placeIcon" style="background-image: url(${basePath + "docs/" + v.icon})"></li>
 				<li class="placePercent">
 					<p><span>${v.senceName}</span></p>
 	
@@ -548,7 +548,7 @@ function setChildSceneUserNum(data) {
 			<div class="stationDetail">
 				<div class="stationName">
 					<i></i>
-					<b style="background-image: url(${basePath + "pages/" + v.icon})"></b>
+					<b style="background-image: url(${basePath + "docs/" + v.icon})"></b>
 					<p>${v.sceneName}</p>
 				</div>
 				<div class="percent">
@@ -610,7 +610,7 @@ function setSpUserNum(data) {
 			<div class="mediaDetail">
 				<div class="mediaName">
 					<i></i>
-					<b style="background-image: url(${basePath + "pages/" + v.icon})"></b>
+					<b style="background-image: url(${basePath + "docs/" + v.icon})"></b>
 					<p>${v.spName}</p>
 				</div>
 				<div class="percent">
@@ -653,7 +653,7 @@ function setProtocalUserNum(data) {
 		v.spList.forEach(function(value, index) {
 			var temp = `<li data-id="${value.spCode}">
 				<span class="newsIcon">
-					<i style="background-image: url(${basePath + "pages/" + value.icon})"></i>
+					<i style="background-image: url(${basePath + "docs/" + value.icon})"></i>
 				</span>
 				<div class="placePercent">
 					<p>${value.spName}</p>
