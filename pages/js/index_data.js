@@ -749,37 +749,32 @@ function EventBind() {
 	});
 
 	var interval = null;
+	/**
+	 * 旋转卡片,默认30ms执行一次
+	 * @param {dom} dom 需要旋转的卡片节点
+	 * @param {string} time 旋转耗时
+	 */
+	function rotateCard(dom, time) {
+		time = time || 2000;
+		// 分为两部分，一部分为50%以前，一部分是以后，透明度已经大小会有不一致，我们约定transform使用为内联样式且scale(m) rotateY(ndeg)
+		// 获取节点当前旋转值
+		var _trans = $(dom)
+      .attr("style")
+			.match(/\d+/g);
+		// 一次旋转为90deg，旋转两次
+		$(dom).attr("style", `transform: scale(${0.75}) rotateY(${+_trans[1] + 90}deg);`);
+		setTimeout(function() {
+			$(dom).attr("style", `transform: scale(${1}) rotateY(${+_trans[1] + 180}deg);`);
+		}, time / 2);
+	}
+
 	$(document).on('click', '.controll', function(e) {
 		if($(this).hasClass('play')) {
 			$(this).removeClass('play').addClass('stop');
-			if(!$('.container').hasClass('flap')) {
-				$('.container').removeClass('flap2');
-				$('.container').addClass('flap');
-				$('.container').css({
-					transform: 'rotateY(0deg)'
-				})
-			} else {
-				$('.container').removeClass('flap');
-				$('.container').addClass('flap2');
-				$('.container').css({
-					transform: 'rotateY(180deg)'
-				})
-			}
+			rotateCard($(".container"));
 			if(interval == null) {
 				interval = setInterval(function() {
-					if(!$('.container').hasClass('flap')) {
-						$('.container').removeClass('flap2');
-						$('.container').addClass('flap');
-						$('.container').css({
-							transform: 'rotateY(0deg)'
-						})
-					} else {
-						$('.container').removeClass('flap');
-						$('.container').addClass('flap2');
-						$('.container').css({
-							transform: 'rotateY(180deg)'
-						})
-					}
+					rotateCard($(".container"));
 				}, 5000);
 			}
 		} else {
